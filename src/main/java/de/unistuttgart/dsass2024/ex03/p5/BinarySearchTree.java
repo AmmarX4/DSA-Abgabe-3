@@ -44,10 +44,14 @@ public class BinarySearchTree<T extends Comparable<T>> implements IBinarySearchT
     public Iterator<T> iterator(TreeTraversalType traversalType) {
 
         return switch (traversalType) {
-            case INORDER: new InOrderIterator();
-            case PREORDER: new PreOrderIterator();
-            case POSTORDER: new PostOrderIterator();
-            case LEVELORDER: new LevelOrderIterator();
+            case INORDER ->
+                new InOrderIterator();
+            case PREORDER ->
+                new PreOrderIterator();
+            case POSTORDER ->
+                new PostOrderIterator();
+            case LEVELORDER ->
+                new LevelOrderIterator();
 
         };
 
@@ -130,6 +134,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements IBinarySearchT
             return nodeValue;
         }
 
+        @Override
         public void remove() {
             throw new UnsupportedOperationException("this method is not supported !");
         }
@@ -141,6 +146,8 @@ public class BinarySearchTree<T extends Comparable<T>> implements IBinarySearchT
         private Stack<IBinaryTreeNode<T>> stack = new Stack<>();
 
         public PostOrderIterator() {
+            //TODO
+
         }
 
         @Override
@@ -149,8 +156,35 @@ public class BinarySearchTree<T extends Comparable<T>> implements IBinarySearchT
         }
 
         @Override
-        public T next() {}
+        public T next() {
+            //TODO
+        }
 
+
+        public void remove() {
+            throw new UnsupportedOperationException("this method is not supported !");
+        }
+    }
+
+    private class LevelOrderIterator implements Iterator<T> {
+
+        private Queue<IBinaryTreeNode<T>> queue = new LinkedList<>();
+
+        public LevelOrderIterator(){
+            //TODO
+        }
+
+        @Override
+        public boolean hasNext() {
+            return !queue.isEmpty();
+        }
+
+        @Override
+        public T next() {
+            //TODO
+        }
+
+        @Override
         public void remove() {
             throw new UnsupportedOperationException("this method is not supported !");
         }
