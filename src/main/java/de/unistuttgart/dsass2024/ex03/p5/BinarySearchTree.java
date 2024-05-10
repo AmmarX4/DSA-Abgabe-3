@@ -37,5 +37,14 @@ public class BinarySearchTree<T extends Comparable<T>> implements IBinarySearchT
         return this.root;
     }
 
+    @Override
+    public boolean isFull() {
+        return false;
+    }
 
+
+    @Override
+    public Iterator<T> iterator(TreeTraversalType traversalType) {
+        return null;
+    }
 }
