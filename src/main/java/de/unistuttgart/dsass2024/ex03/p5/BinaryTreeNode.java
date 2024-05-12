@@ -1,11 +1,12 @@
 package de.unistuttgart.dsass2024.ex03.p5;
 
 public class BinaryTreeNode<T extends Comparable<T>> implements IBinaryTreeNode<T> {
-private IBinaryTreeNode<T> left;
-private IBinaryTreeNode<T> right;
-private T val;
+    private IBinaryTreeNode<T> left;
+    private IBinaryTreeNode<T> right;
+    private T val;
 
-    public BinaryTreeNode() {}
+    public BinaryTreeNode() {
+    }
 
 
     @Override
